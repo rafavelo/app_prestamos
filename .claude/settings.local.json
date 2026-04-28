@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter analyze *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter clean *)",
+      "Bash(./gradlew clean *)",
+      "Bash(cmd /c \"gradlew.bat clean\")"
+    ]
+  }
+}
