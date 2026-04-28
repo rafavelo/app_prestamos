@@ -4,6 +4,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'core/app_colors.dart';
+import 'firebase_config.dart';
 import 'core/theme_manager.dart';
 import 'screens/check_pin_wrapper.dart';
 import 'screens/pantalla_acceso.dart';
@@ -15,15 +16,7 @@ void main() async {
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
-  await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyBhbFjEeyztmXKE-En0yPg9OtzL2aBpROc",
-      appId: "1:18395485989:android:5b2a1e13385177259b2ccc",
-      messagingSenderId: "18395485989",
-      projectId: "gestorprestamos-50e90",
-      storageBucket: "gestorprestamos-50e90.firebasestorage.app",
-    ),
-  );
+  await Firebase.initializeApp(options: firebaseOptions);
   await themeManager.cargarPreferencia();
   runApp(const MyApp());
 }
